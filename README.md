@@ -1,4 +1,4 @@
-# Spring Librería
+# Librería PEN
 
 Este proyecto es una aplicación web de gestión de una librería, construida con Spring Boot y Java. La aplicación permite a los usuarios hacer el sisteme de ventas , añadir al carrito los productos seleccionados.
 
