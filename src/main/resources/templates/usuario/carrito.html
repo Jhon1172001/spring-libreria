@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Libreri PEN - Carrito</title>
   <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
   <link th:href="@{/css/heroic-features.css}" rel="stylesheet">
   <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
   
@@ -20,6 +22,13 @@
       margin: 0;
       padding: 0;
     }
+	
+	/* Estilo para las imágenes del carrito */
+	   .product-image {
+	     width: 80px;
+	     height: auto;
+	   }
+   
   </style>
 </head>
 
@@ -27,39 +36,36 @@
 
   <!-- Barra de Navegación -->
   <div class="container-hero">
-    <div class="container hero">
-      <div class="customer-support">
-        <i class="fa-solid fa-headset" style="color: var(--primary-color);"></i>
-        <div class="content-customer-support">
-          <span class="text" style="font-size: 1.2rem;">Soporte al cliente</span>
-          <span class="number" style="font-size: 1.2rem;">123-456-7890</span>
+            <div class="container hero">
+                <div class="customer-support">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="content-customer-support">
+                        <span class="text">Soporte al cliente</span>
+                        <span class="number">123-456-7890</span>
+                    </div>
+                </div>
+
+                <div class="container-logo" style="text-align: center;">
+                    <img src="https://i.ibb.co/d6x52z5/Dise-o-sin-t-tulo.jpg" width="100" height="80"
+                        style="display: block; margin: 0 auto;">
+                    <h1 class="logo" style="margin-top: 10px;"><a href="/" style="text-decoration: none; color: black;">LIBRERIA PEN</a></h1>
+                </div>
+
+    			<div class="container-user">
+    			        <a href="#" class="nav-item" style="margin-right: 10px; text-decoration: none; color: var(--dark-color);"></a>
+    			        <a href="#" class="nav-item" style="text-decoration: none; color: var(--dark-color);"></a>
+    			      </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="container-logo">
-        <img src="https://i.ibb.co/d6x52z5/Dise-o-sin-t-tulo.jpg" width="80" height="60" alt="Logo Libreria PEN">
-        <h1 class="logo"><a href="#" onclick="window.location.href='/'" style="font-size: 2rem; color: var(--dark-color);">LIBRERIA PEN</a></h1>
-      </div>
-
-      <div class="container-user">
-        <i class="fa-solid fa-user" style="color: var(--primary-color);"></i>
-        <a href="#" class="nav-item" style="margin-right: 10px; text-decoration: none; color: var(--dark-color);">Login</a>
-        <i class="fa-solid fa-basket-shopping" style="color: var(--primary-color);"></i>
-        <a href="#" class="nav-item" style="text-decoration: none; color: var(--dark-color);">Carrito</a>
-      </div>
-    </div>
-  </div>
 
   <!-- Barra de Menú -->
   <div class="container-navbar">
     <nav class="navbar container">
       <ul class="menu">
-        <li><a href="/">Inicio</a></li>
         <li><a href="#">Categorías</a></li>
         <li><a href="#">Top 10</a></li>
         <li><a href="#">Útiles</a></li>
-        <li><a href="#">Reseñas</a></li>
-        <li><a href="#">Más</a></li>
       </ul>
       <form class="search-form">
         <input type="search" placeholder="Buscar...">
@@ -72,11 +78,11 @@
 
   <!-- Contenido de la Página -->
   <div class="container">
-    <h1 class="mt-4 mb-3">Libreria PEN <small>Carrito</small></h1>
 
     <table class="table">
       <thead>
         <tr>
+			<th scope="col">Imagen</th>
           <th scope="col">Producto</th>
           <th scope="col">Precio</th>
           <th scope="col">Cantidad</th>
@@ -86,6 +92,9 @@
       </thead>
       <tbody>
         <tr th:each="dorden:${cart}">
+			<td><img class="img-fluid rounded product-image" th:src="@{/images/{img} (img=${dorden.producto.imagen})}" alt="Imagen del producto"></td>
+
+		  <td th:text="${dorden.nombre}"></td>
           <td th:text="${dorden.nombre}"></td>
           <td th:text="${dorden.precio}"></td>
           <td th:text="${dorden.cantidad}"></td>
@@ -95,15 +104,101 @@
       </tbody>
     </table>
 
-    <div class="col-lg-3">
-      <h2 class="card-title">SUBTOTAL</h2>
-      <ul class="list-group">
-        <li class="list-group-item"><h5 th:text="${orden.total}"></h5></li>
-        <a th:href="@{/order}" class="btn btn-dark">Ver Orden</a>
-      </ul>
-    </div>
-  </div>
+	<div class="col-lg-3" style="margin-bottom: 40px;"> <!-- Añadido margen inferior -->
+	  <h2 class="card-title">SUBTOTAL</h2>
+	  <ul class="list-group">
+	    <li class="list-group-item"><h5 th:text="${orden.total}"></h5></li>
+	    <a th:href="@{/order}" class="btn btn-dark">Ver Orden</a>
+	  </ul>
+	</div>
 
+  </div>
+  <!-- Footer -->
+  	<div th:fragment="footer">
+  		<footer class="footer">
+  			<div class="container container-footer">
+  				<div class="menu-footer">
+  					<div class="contact-info">
+  						<p class="title-footer">Información de Contacto</p>
+  						<ul>
+  							<li>
+  								Dirección: 71 Pennington Lane Vernon Rockville, CT
+  								06066
+  							</li>
+  							<li>Teléfono: 123-456-7890</li>
+  							<li>EmaiL: LibreriaPen@support.com</li>
+  						</ul>
+  						<div class="social-icons">
+  							<span class="facebook">
+  								<i class="fa-brands fa-facebook-f"></i>
+  							</span>
+  							<span class="twitter">
+  								<i class="fa-brands fa-twitter"></i>
+  							</span>
+  							<span class="youtube">
+  								<i class="fa-brands fa-youtube"></i>
+  							</span>
+  							<span class="pinterest">
+  								<i class="fa-brands fa-pinterest-p"></i>
+  							</span>
+  							<span class="instagram">
+  								<i class="fa-brands fa-instagram"></i>
+  							</span>
+  						</div>
+  					</div>
+
+  					<div class="information">
+  						<p class="title-footer">Información</p>
+  						<ul>
+  							<li><a href="#">Acerca de Nosotros</a></li>
+  							<li><a href="#">Información Delivery</a></li>
+  							<li><a href="#">Politicas de Privacidad</a></li>
+  							<li><a href="#">Términos y condiciones</a></li>
+  							<li><a href="#">Contactános</a></li>
+  						</ul>
+  					</div>
+
+  					<div class="my-account">
+  						<p class="title-footer">Mi cuenta</p>
+
+  						<ul>
+  							<li><a href="#">Mi cuenta</a></li>
+  							<li><a href="#">Historial de ordenes</a></li>
+  							<li><a href="#">Lista de deseos</a></li>
+  							<li><a href="#">Boletín</a></li>
+  							<li><a href="#">Reembolsos</a></li>
+  						</ul>
+  					</div>
+
+  					<div class="newsletter">
+  						<p class="title-footer">Boletín informativo</p>
+
+  						<div class="content">
+  							<p>
+  								Suscríbete a nuestros boletines ahora y mantente al
+  								día con nuevas colecciones y ofertas exclusivas.
+  							</p>
+  							<input type="email" placeholder="Ingresa el correo aquí...">
+  							<button>Suscríbete</button>
+  						</div>
+  					</div>
+  				</div>
+  				<div class="row mt-3">
+  					<div class="col-md-12 text-center">
+  						<p>&copy; LIBRERIAS PEN S.A.C. R.U.C. 3452353265465 | Todos los Derechos Reservados.</p>
+  					</div>
+  				</div>
+
+
+  				<h5>Libro de Reclamaciones</h5>
+  				<a href="#"><img
+  						src="https://www.crisol.com.pe/media/tem-banners/Item_libro_de_reclamaciones_128x80.png"
+  						alt="Libro de Reclamaciones" width="100"></a>
+  			</div>
+  	
+  	</div>
+  	</footer>
+  	</div>
   <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
   <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
 </body>

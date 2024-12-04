@@ -118,6 +118,10 @@
     }
 
   </style>
+  
+  <!-- Cargar el script de reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  
 </head>
 
 <body>
@@ -147,6 +151,8 @@
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required autocomplete="off">
       </div>
+	  
+	  <div class="g-recaptcha" data-sitekey="6Lf02I8qAAAAAGJugFXYSoNVIsAZPG-0nqc8B_uW"></div><br>
 
       <button type="submit" class="save-btn">Guardar</button>
     </form>

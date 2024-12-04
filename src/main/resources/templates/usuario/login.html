@@ -161,6 +161,10 @@
     }
 
   </style>
+
+  <!-- Cargar el script de reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body>
@@ -174,6 +178,8 @@
     <p>Welcome! Please login to continue.</p>
     
     <form th:action="@{/usuario/acceder}" method="post">
+      <input type="hidden" name="JSESSIONID" value="${session.getId()}">
+      
       <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="Enter your email address" required autocomplete="off">
@@ -183,6 +189,9 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" placeholder="Enter your password" required>
       </div>
+
+      <!-- Widget de reCAPTCHA -->
+      <div class="g-recaptcha" data-sitekey="6Lf02I8qAAAAAGJugFXYSoNVIsAZPG-0nqc8B_uW"></div><br><br>
 
       <button type="submit" class="login-btn">Log In</button>
       <button type="button" class="signup-btn" onclick="window.location.href='/usuario/registro'">Sign Up</button>
@@ -205,6 +214,7 @@
       }, index * 200); // Delay for each input field animation
     });
   </script>
+
 </body>
 
 </html>
