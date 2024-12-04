@@ -121,5 +121,642 @@ public class ProductoController {
 		productoService.delete(id);
 		return "redirect:/productos";
 	}
+public String deletde(@PathVariable Integer id) {
+		
+		Producto p = new Producto();
+		p=productoService.get(id).get();
+		
+		//eliminar cuando no sea la imagen por defecto
+		if (!p.getImagen().equals("default.jpg")) {
+			upload.deleteImage(p.getImagen());
+		}
+		
+		productoService.delete(id);
+		return "redirect:/productos";
+	}
+public String deleste(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deletdfe(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delsete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deslete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delssete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deldete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delfete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String dsselete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delffete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deleteg(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String sdelete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deleteff(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deletegg(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String desdlete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deletegf(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delddsete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delefste(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String defslete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delefdte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deletgfe(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delejhte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String dedslete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delejtte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delefte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deleffte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deledsdte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delegdfdte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delefdfte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String dfdelete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deldfete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String degdfflete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String desdsdslete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delefddfdte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deldsdsdete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String fdfdelete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deletegdgd(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deledfdfte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deledfdfdte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deddvdlete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delbdbdete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String dedvdvdvlete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deledvdvte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delvdvdete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String deldvdete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String dedvvlete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String decdcdlete(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delecdcdte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
+public String delecdcte(@PathVariable Integer id) {
+	
+	Producto p = new Producto();
+	p=productoService.get(id).get();
+	
+	//eliminar cuando no sea la imagen por defecto
+	if (!p.getImagen().equals("default.jpg")) {
+		upload.deleteImage(p.getImagen());
+	}
+	
+	productoService.delete(id);
+	return "redirect:/productos";
+}
 
 }

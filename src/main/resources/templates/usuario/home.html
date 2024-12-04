@@ -10,13 +10,21 @@
 
   <title>Libreria PEN</title>
 
-
- <!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->
   <link th:href="@{vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 
   <!-- Custom styles for this template -->
   <link th:href="@{css/heroic-features.css}" rel="stylesheet">
 
+  <style>
+    /* Eliminar márgenes del body y el contenedor principal */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 
 <body>
@@ -24,45 +32,75 @@
   <!-- Navigation -->
   <div th:include="usuario/template_usuario.html::header" th:if="${sesion==null}"></div>
   
-   <div th:include="usuario/template_usuario.html::header-user" th:unless="${sesion==null}"></div>
+  <div th:include="usuario/template_usuario.html::header-user" th:unless="${sesion==null}"></div>
 
-    <!-- Page Content -->
-    <div class="container">
+  <!-- Page Content -->
+  <div class="container">
 
-      <!-- Jumbotron Header -->
-      <header class="jumbotron my-4">
-        <h1 class="display-3">Bienvenido a Libreria PEN</h1>
-        <p class="lead">Tu tienda de productos en Línea</p>
-      </header>
+    <!-- Jumbotron Header -->
+    
 
-      <!-- Page Features -->
-      <div class="row text-center">
+    <!-- Page Features -->
+	<div class="row text-center">
+	  <div class="col-lg-3 col-md-6 mb-4" th:each="producto: ${productos}">
+	    <div class="card h-100 card-product">
+	      <div class="container-img">
+	        <img class="card-img-top" th:src="@{/images/{img} (img=${producto.imagen})}" alt="Imagen del producto" />
 
-        <div class="col-lg-3 col-md-6 mb-4" th:each="producto: ${productos}">
-          <div class="card h-100">
-            <img class="card-img-top" th:src="@{/images/{img} (img=${producto.imagen})} " alt="">
-            <div class="card-body">
-              <p class="card-text" th:text="${producto.nombre}"></p>
-            </div>
-            <div class="card-footer">
-              <a th:href="@{/productohome/{id} (id=${producto.id}) }" class="btn btn-success">Ver producto</a>
-            </div>
-          </div>
-        </div>         
-      </div>
-      <!-- /.row -->
+	        <div class="button-group">
+	          <span>
+	            <i class="fa-regular fa-eye"></i>
+	          </span>
+	          <span>
+	            <i class="fa-regular fa-heart"></i>
+	          </span>
+	          <span>
+	            <i class="fa-solid fa-code-compare"></i>
+	          </span>
+	        </div>
+	      </div>
 
-    </div>
-    <!-- /.container -->
+	      <div class="content-card-product">
+	        <div class="stars">
+	          <i class="fa-solid fa-star"></i>
+	          <i class="fa-solid fa-star"></i>
+	          <i class="fa-solid fa-star"></i>
+	          <i class="fa-solid fa-star-half-alt"></i>
+	          <i class="fa-regular fa-star"></i>
+	        </div>
 
-    <!-- Footer -->
-    <div th:include="usuario/template_usuario.html::footer">
-    </div>
+	        <h3 th:text="${producto.nombre}">Nombre del Producto</h3>
+	        
+	        <div class="d-flex justify-content-between align-items-center">
+	          <!-- Precio a la izquierda -->
+	          <p class="price mb-0" th:text="${producto.precio}">$5.70</p>
+	          
+	          <!-- Botón de la canasta a la derecha -->
+	          <span class="btn-add-cart" style="border: 1px solid var(--primary-color); border-radius: 50%; padding: 5px; cursor: pointer;">
+	            <a th:href="@{/productohome/{id} (id=${producto.id}) }" class="text-decoration-none">
+	              <i class="fa-solid fa-basket-shopping" style="color: var(--primary-color); font-size: 1.5rem;"></i>
+	            </a>
+	          </span>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
-     <!-- Bootstrap core JavaScript -->
-    <script th:src="@{vendor/jquery/jquery.min.js}"></script>
-    <script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    <!-- /.row -->
 
-  </body>
+  </div>
+  <!-- /.container -->
 
-  </html>
+  <!-- Footer -->
+  <div th:include="usuario/template_usuario.html::footer">
+  </div>
+
+   <!-- Bootstrap core JavaScript -->
+  <script th:src="@{vendor/jquery/jquery.min.js}"></script>
+  <script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
