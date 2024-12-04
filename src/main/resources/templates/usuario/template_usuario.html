@@ -3,106 +3,1142 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-  <title>Libreria PEN</title>
+	<title>Libreria PEN</title>
 
 
- <!-- Bootstrap core CSS -->
-  <link th:href="@{vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+	<link th:href="@{vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+	
+	
 
-  <!-- Custom styles for this template -->
-  <link th:href="@{css/heroic-features.css}" rel="stylesheet">
+
+
+
+	<!-- Custom styles for this template -->
+	<link th:href="@{css/heroic-features.css}" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <!-- Navigation -->
- <div th:fragment="header">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-			<div class="container">
-				<a class="navbar-brand" th:href="@{/}">Libreria PEN</a>
+	<!-- Navigation -->
+	<div th:fragment="header">
+		<div class="container-hero">
+			<div class="container hero">
+				<div class="customer-support">
+					<i class="fa-solid fa-headset"></i>
+					<div class="content-customer-support">
+						<span class="text">Soporte al cliente</span>
+						<span class="number">123-456-7890</span>
+					</div>
+				</div>
 
-				<form class="form-inline my-2 my-lg-0" method="post" th:action="@{/search}">
-					<input class="form-control mr-sm-2" type="search"
-						placeholder="Buscar" aria-label="Search" name="nombre"
-						autocomplete="off">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-				</form>
+				<div class="container-logo" style="text-align: center;">
+					<img src="https://i.ibb.co/d6x52z5/Dise-o-sin-t-tulo.jpg" width="100" height="80"
+						style="display: block; margin: 0 auto;">
+					<h1 class="logo" style="margin-top: 10px;"><a href=""
+							style="text-decoration: none; color: black;">LIBRERIA PEN</a></h1>
+				</div>
 
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse"
-					data-target="#navbarResponsive" aria-controls="navbarResponsive"
-					aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" th:href="@{/getCart}">Carrito</a></li>
-						<li class="nav-item"><a class="nav-link" th:href="@{/usuario/login}">Login</a></li>
+				<div class="container-user">
+					<i class="fa-solid fa-user"></i>
+					<span class="nav-item"><a class="nav-link" th:href="@{/usuario/login}">Login</a></span>
 
-					</ul>
+					<i class="fa-solid fa-basket-shopping"></i>
+					<div class="content-shopping-cart">
+						<span class="nav-item"><a class="nav-link" th:href="@{/getCart}">Carrito</a></span>
+					</div>
 				</div>
 			</div>
-		</nav>
+		</div>
+		<!-- acceso rapido -->
 
-	</div>
-    
-    <div th:fragment="header-user">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-		<div class="container">
-			<a class="navbar-brand" th:href="@{/}">Libreria PEN</a>
+		<div class="container-navbar">
+			<nav class="navbar container">
+				<i class="fa-solid fa-bars"></i>
+				<ul class="menu">
+					<li><a href="categoria.html">Categorias</a></li>
+					<li><a href="#">TOp 10</a></li>
+					<li><a href="#">Utiles</a></li>
+				</ul>
+				<!-- Busqueda -->
+				<form class="search-form">
+					<input type="search" placeholder="Buscar..." />
+					<button class="btn-search">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</form>
+			</nav>
+		</div>
+		
+		<!-- Banner -->
+		<section class="banner">
+			<div class="content-banner">
+				<p>Los mejores productos</p>
+				<h2>100% Garantizado <br />Libros y Utiles</h2>
+				<a href="#">Comprar ahora</a>
+			</div>
+		</section>
+		<!-- Agregado extra -->
+		<main class="main-content">
+			<section class="container container-features">
+				<div class="card-feature">
+					<i class="fa-solid fa-plane-up"></i>
+					<div class="feature-content">
+						<span>Envío gratuito a nivel mundial</span>
+						<p>En pedido superior a $150</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-wallet"></i>
+					<div class="feature-content">
+						<span>Contrareembolso</span>
+						<p>100% garantía de devolución de dinero</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-gift"></i>
+					<div class="feature-content">
+						<span>Tarjeta regalo especial</span>
+						<p>Ofrece bonos especiales con regalo</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-headset"></i>
+					<div class="feature-content">
+						<span>Servicio al cliente 24/7</span>
+						<p>LLámenos 24/7 al 123-456-7890</p>
+					</div>
+				</div>
+			</section>
+			<section class="container top-categories">
+				<h1 class="heading-1">Mejores Categorías</h1>
+				<div class="container-categories">
+					<div class="card-category category-moca">
+						<p>Utiles para Todos</p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-expreso">
+						<p>Libros de Romance</p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-capuchino">
+						<p>Niños</p>
+						<span>Ver más</span>
+					</div>
+				</div>
+			</section>
+			<section class="container top-products">
+				<h1 class="heading-1">Mejores Productos</h1>
 
-			<form class="form-inline my-2 my-lg-0" method="post" th:action="@{/search}">
-				<input class="form-control mr-sm-2" type="search"
-					placeholder="Buscar" aria-label="Search" name="nombre"
-					autocomplete="off">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-			</form>
+				<div class="container-options">
+					<span class="active">Destacados</span>
+					<span>Más recientes</span>
+					<span>Mejores Vendidos</span>
+				</div>
+
+				<div class="container-products">
+					<!-- Producto -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="https://i.harperapps.com/hcanz/covers/9780008714772/y648.jpg" alt="MR BEAST" />
+							<span class="discount">-13%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Libro de Bill</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">S/466</p>
+						</div>
+					</div>
+					<!-- Producto  -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="https://production-tailoy-repo-magento-statics.s3.amazonaws.com/imagenes/872x872/productos/i/l/a/lapiz-chequeo-x-2-und-2522-default-1.jpg"
+								alt="Lapiz Artesco" />
+							<span class="discount">-22%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Lapiz Artesco</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5.70 <span>$7.30</span></p>
+						</div>
+					</div>
+					<!--  producto -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="https://wallpapers.com/images/hd/the-flame-hashira-rengoku-manga-cover-7no570j8v7153tz6.jpg"
+								alt="Manga arco de Rengoku" />
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<h3>Manga arco de Rengoku</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$3.20</p>
+						</div>
+					</div>
+					<!-- producto -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="https://promart.vteximg.com.br/arquivos/ids/6802213-275-275/image-d3e3e4f8ad584fc7b7c5516af91f2a0f.jpg?v=638133045321700000"
+								alt="50 Plumones" />
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Caja de 50 Plumones</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5.60</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="gallery">
+				<img src="https://cdhcm.org.mx/wp-content/uploads/2017/05/desta_gal190517-660x330.jpg"
+					alt="Gallery Img1" class="gallery-img-1" /><img
+					src="https://img.freepik.com/foto-gratis/vista-superior-lapices-utiles-escolares_23-2147655923.jpg?semt=ais_hybrid"
+					alt="Gallery Img2" class="gallery-img-2" /><img
+					src="https://www.upb.edu.co/es/imagenes/imgtipod-blgleyendosinseparador-megustarialeer-1464204951973.jpg"
+					alt="Gallery Img3" class="gallery-img-3" /><img
+					src="https://img.freepik.com/fotos-premium/surtido-utiles-escolares-pizarra-negra-concepto-regreso-escuela_123827-12156.jpg"
+					alt="Gallery Img4" class="gallery-img-4" /><img
+					src="https://images.unsplash.com/photo-1654931800100-2ecf6eee7c64?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8"
+					alt="Gallery Img5" class="gallery-img-5" />
+			</section>
+
+			<section class="container specials">
+				<h1 class="heading-1">Especiales</h1>
+
+				<div class="container-products">
+					<!-- Producto -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMvjLTdFDm_I5FMzdxZaAjRROayeiaF-74Ag&s"
+								alt="Libro Coquito" />
+							<span class="discount">-13%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Libro Coquito</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$4.60 <span>$5.30</span></p>
+						</div>
+					</div>
+					<!-- Producto  -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="https://www.libreriailusion.com/wp-content/uploads/2022/07/3358a1-616b4cf5122a2e757d15927765610293-640-0-600x600.png"
+								alt="LÁPICES PARA DIBUJAR GRAFITO" />
+							<span class="discount">-22%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>LÁPICES PARA DIBUJAR GRAFITO</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5.70 <span>$7.30</span></p>
+						</div>
+					</div>
+					<!-- producto -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="https://www.libreriailusion.com/wp-content/uploads/2022/02/014103c3fc3a3b48164e7589b4846588.jpg"
+								alt="Caja de Madera de Colores" />
+							<span class="discount">-30%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<h3>Caja de Madera de Colores</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$3.85 <span>$5.50</span></p>
+						</div>
+					</div>
+					<!-- producto -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="https://www.libreriailusion.com/wp-content/uploads/2021/08/carpeta_tapa_plastica_peque.jpeg"
+								alt="Folders de plastico" />
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Folders de plastico</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5.60</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--  categorias -->
+
+			<section class="container blogs">
+				<h1 class="heading-1">Lo Nuevo</h1>
+
+				<div class="container-blogs">
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="https://http2.mlstatic.com/D_NQ_NP_743974-MLM75838125378_042024-O.webp"
+								alt="Imagen Blog 1" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Colleccion Completa de Harry Potter</h3>
+							<span>15 Octubre 2024</span>
+							<p>
+								Disfruta de estas nuevas y magicas aventuras
+								junto a Harry y sus amigos descubre sus
+								inicios y crece junto a el, veras nacer al
+								mejor mago de los tiempos de HOWARS.
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="https://zachary-jones.com/zambombazo/wp-content/uploads/2016/08/07_reglas_y_calculadoras.jpg"
+								alt="Imagen Blog 2" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Los Mejores Utiles de toda Categoria</h3>
+							<span>15 Octubre 2024</span>
+							<p>
+								Explora de la amplia gama de utiles
+								disponibles para todo publico, deja brillar
+								la imaginacion asi como el orden, para escuelas
+								y oficinas, para estudiantes y padres ven y explora
+								por ti mismo.
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="https://imgs.hipertextual.com/wp-content/uploads/2024/03/mangas-mas-vendidos-de-la-historia.jpg"
+								alt="Imagen Blog 3" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Mangas actualizados</h3>
+							<span>15 Octubre 2024</span>
+							<p>
+								Iniciando el año con una nueva amplia
+								gama de mangas desde lo dramatico hasta lo mejor
+								se el heroe de tu propia historia sumerjiendote
+								junto a los protagonistas tu que esperas.
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarResponsive" aria-controls="navbarResponsive"
-				aria-expanded="false" aria-label="Toggle navigation">
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle" href="#"
-							id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false"> USER </a>
-							
-							<div class="dropdown-menu"
-								aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" th:href="@{/usuario/compras}">Compras</a> 
-								<a class="dropdown-item" th:href="@{/getCart}">Carrito</a>
-								<a class="dropdown-item"th:href="@{/usuario/cerrar}">Salir</a>
-							</div></li>
+
+
 				</ul>
 			</div>
-		</div>
+	</div>
 	</nav>
-</div>
 
-    <!-- Footer -->
-    <div th:fragment="footer">
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; jhon-espinoza-2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-    </div>
+	</div>
+	<link th:href="@{css/heroic-features.css}" rel="stylesheet">
 
-     <!-- Bootstrap core JavaScript -->
-    <script th:src="@{vendor/jquery/jquery.min.js}"></script>
-    <script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+	<div th:fragment="header-user">
+	    <!-- Barra de Navegación Principal -->
+	    <div class="container-hero">
+	        <div class="container hero">
+	            <!-- Soporte al Cliente -->
+	            <div class="customer-support">
+	                <i class="fa-solid fa-headset"></i>
+	                <div class="content-customer-support">
+	                    <span class="text">Soporte al cliente</span>
+	                    <span class="number">123-456-7890</span>
+	                </div>
+	            </div>
 
-  </body>
+	            <!-- Logo Centrado -->
+	            <div class="container-logo">
+	                <a href="/" style="text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+	                    <img src="https://i.ibb.co/d6x52z5/Dise-o-sin-t-tulo.jpg" width="100" height="80" alt="Logo Libreria PEN">
+	                    <h1 class="logo"><a href="/" style="color: #000; font-size: 3rem; font-family: 'Poppins', sans-serif; font-weight: 700;">LIBRERIA PEN</a></h1>
+	                </a>
+	            </div>
 
-  </html>
+	            <!-- Usuario o Carrito -->
+	            <div class="container-user">
+	                <i class="fa-solid fa-user"></i>
+	                <ul class="navbar-nav">
+	                    <li class="nav-item dropdown">
+	                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+	                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: var(--dark-color);">USER</a>
+	                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+	                            <a class="dropdown-item" th:href="@{/usuario/compras}">Compras</a>
+	                            <a class="dropdown-item" th:href="@{/getCart}">Carrito</a>
+	                            <a class="dropdown-item" th:href="@{/usuario/cerrar}">Salir</a>
+	                        </div>
+	                    </li>
+	                </ul>
+	                <i class="fa-solid fa-basket-shopping"></i>
+	                <a class="nav-link" th:href="@{/getCart}" style="color: var(--dark-color);">Carrito</a>
+	            </div>
+	        </div>
+	    </div>
+
+	    <!-- Segunda barra de navegación con categorías y buscador -->
+	    <div class="container-navbar">
+	        <nav class="navbar container">
+	            <i class="fa-solid fa-bars"></i>
+	            <ul class="menu">
+	                <li><a href="#">Categorías</a></li>
+	                <li><a href="#">Top 10</a></li>
+	                <li><a href="#">Útiles</a></li>
+	            </ul>
+	            <!-- Buscador -->
+	            <form class="search-form">
+	                <input type="search" placeholder="Buscar..." />
+	                <button class="btn-search">
+	                    <i class="fa-solid fa-magnifying-glass"></i>
+	                </button>
+	            </form>
+	        </nav>
+	    </div>
+		<!-- Banner -->
+				<section class="banner">
+					<div class="content-banner">
+						<p>Los mejores productos</p>
+						<h2>100% Garantizado <br />Libros y Utiles</h2>
+						<a href="#">Comprar ahora</a>
+					</div>
+				</section>
+				<!-- Agregado extra -->
+				<main class="main-content">
+					<section class="container container-features">
+						<div class="card-feature">
+							<i class="fa-solid fa-plane-up"></i>
+							<div class="feature-content">
+								<span>Envío gratuito a nivel mundial</span>
+								<p>En pedido superior a $150</p>
+							</div>
+						</div>
+						<div class="card-feature">
+							<i class="fa-solid fa-wallet"></i>
+							<div class="feature-content">
+								<span>Contrareembolso</span>
+								<p>100% garantía de devolución de dinero</p>
+							</div>
+						</div>
+						<div class="card-feature">
+							<i class="fa-solid fa-gift"></i>
+							<div class="feature-content">
+								<span>Tarjeta regalo especial</span>
+								<p>Ofrece bonos especiales con regalo</p>
+							</div>
+						</div>
+						<div class="card-feature">
+							<i class="fa-solid fa-headset"></i>
+							<div class="feature-content">
+								<span>Servicio al cliente 24/7</span>
+								<p>LLámenos 24/7 al 123-456-7890</p>
+							</div>
+						</div>
+					</section>
+					<section class="container top-categories">
+						<h1 class="heading-1">Mejores Categorías</h1>
+						<div class="container-categories">
+							<div class="card-category category-moca">
+								<p>Utiles para Todos</p>
+								<span>Ver más</span>
+							</div>
+							<div class="card-category category-expreso">
+								<p>Libros de Romance</p>
+								<span>Ver más</span>
+							</div>
+							<div class="card-category category-capuchino">
+								<p>Niños</p>
+								<span>Ver más</span>
+							</div>
+						</div>
+					</section>
+					<section class="container top-products">
+						<h1 class="heading-1">Mejores Productos</h1>
+
+						<div class="container-options">
+							<span class="active">Destacados</span>
+							<span>Más recientes</span>
+							<span>Mejores Vendidos</span>
+						</div>
+
+						<div class="container-products">
+							<!-- Producto -->
+							<div class="card-product">
+								<div class="container-img">
+									<img src="https://i.harperapps.com/hcanz/covers/9780008714772/y648.jpg" alt="MR BEAST" />
+									<span class="discount">-13%</span>
+									<div class="button-group">
+										<span>
+											<i class="fa-regular fa-eye"></i>
+										</span>
+										<span>
+											<i class="fa-regular fa-heart"></i>
+										</span>
+										<span>
+											<i class="fa-solid fa-code-compare"></i>
+										</span>
+									</div>
+								</div>
+								<div class="content-card-product">
+									<div class="stars">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-regular fa-star"></i>
+									</div>
+									<h3>Libro de Bill</h3>
+									<span class="add-cart">
+										<i class="fa-solid fa-basket-shopping"></i>
+									</span>
+									<p class="price">S/466</p>
+								</div>
+							</div>
+							<!-- Producto  -->
+							<div class="card-product">
+								<div class="container-img">
+									<img src="https://production-tailoy-repo-magento-statics.s3.amazonaws.com/imagenes/872x872/productos/i/l/a/lapiz-chequeo-x-2-und-2522-default-1.jpg"
+										alt="Lapiz Artesco" />
+									<span class="discount">-22%</span>
+									<div class="button-group">
+										<span>
+											<i class="fa-regular fa-eye"></i>
+										</span>
+										<span>
+											<i class="fa-regular fa-heart"></i>
+										</span>
+										<span>
+											<i class="fa-solid fa-code-compare"></i>
+										</span>
+									</div>
+								</div>
+								<div class="content-card-product">
+									<div class="stars">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-regular fa-star"></i>
+										<i class="fa-regular fa-star"></i>
+									</div>
+									<h3>Lapiz Artesco</h3>
+									<span class="add-cart">
+										<i class="fa-solid fa-basket-shopping"></i>
+									</span>
+									<p class="price">$5.70 <span>$7.30</span></p>
+								</div>
+							</div>
+							<!--  producto -->
+							<div class="card-product">
+								<div class="container-img">
+									<img src="https://wallpapers.com/images/hd/the-flame-hashira-rengoku-manga-cover-7no570j8v7153tz6.jpg"
+										alt="Manga arco de Rengoku" />
+									<div class="button-group">
+										<span>
+											<i class="fa-regular fa-eye"></i>
+										</span>
+										<span>
+											<i class="fa-regular fa-heart"></i>
+										</span>
+										<span>
+											<i class="fa-solid fa-code-compare"></i>
+										</span>
+									</div>
+								</div>
+								<div class="content-card-product">
+									<div class="stars">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+									</div>
+									<h3>Manga arco de Rengoku</h3>
+									<span class="add-cart">
+										<i class="fa-solid fa-basket-shopping"></i>
+									</span>
+									<p class="price">$3.20</p>
+								</div>
+							</div>
+							<!-- producto -->
+							<div class="card-product">
+								<div class="container-img">
+									<img src="https://promart.vteximg.com.br/arquivos/ids/6802213-275-275/image-d3e3e4f8ad584fc7b7c5516af91f2a0f.jpg?v=638133045321700000"
+										alt="50 Plumones" />
+									<div class="button-group">
+										<span>
+											<i class="fa-regular fa-eye"></i>
+										</span>
+										<span>
+											<i class="fa-regular fa-heart"></i>
+										</span>
+										<span>
+											<i class="fa-solid fa-code-compare"></i>
+										</span>
+									</div>
+								</div>
+								<div class="content-card-product">
+									<div class="stars">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-regular fa-star"></i>
+									</div>
+									<h3>Caja de 50 Plumones</h3>
+									<span class="add-cart">
+										<i class="fa-solid fa-basket-shopping"></i>
+									</span>
+									<p class="price">$5.60</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="gallery">
+						<img src="https://cdhcm.org.mx/wp-content/uploads/2017/05/desta_gal190517-660x330.jpg"
+							alt="Gallery Img1" class="gallery-img-1" /><img
+							src="https://img.freepik.com/foto-gratis/vista-superior-lapices-utiles-escolares_23-2147655923.jpg?semt=ais_hybrid"
+							alt="Gallery Img2" class="gallery-img-2" /><img
+							src="https://www.upb.edu.co/es/imagenes/imgtipod-blgleyendosinseparador-megustarialeer-1464204951973.jpg"
+							alt="Gallery Img3" class="gallery-img-3" /><img
+							src="https://img.freepik.com/fotos-premium/surtido-utiles-escolares-pizarra-negra-concepto-regreso-escuela_123827-12156.jpg"
+							alt="Gallery Img4" class="gallery-img-4" /><img
+							src="https://images.unsplash.com/photo-1654931800100-2ecf6eee7c64?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8"
+							alt="Gallery Img5" class="gallery-img-5" />
+					</section>
+
+					<section class="container specials">
+						<h1 class="heading-1">Especiales</h1>
+
+						<div class="container-products">
+							<!-- Producto -->
+							<div class="card-product">
+								<div class="container-img">
+									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMvjLTdFDm_I5FMzdxZaAjRROayeiaF-74Ag&s"
+										alt="Libro Coquito" />
+									<span class="discount">-13%</span>
+									<div class="button-group">
+										<span>
+											<i class="fa-regular fa-eye"></i>
+										</span>
+										<span>
+											<i class="fa-regular fa-heart"></i>
+										</span>
+										<span>
+											<i class="fa-solid fa-code-compare"></i>
+										</span>
+									</div>
+								</div>
+								<div class="content-card-product">
+									<div class="stars">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-regular fa-star"></i>
+									</div>
+									<h3>Libro Coquito</h3>
+									<span class="add-cart">
+										<i class="fa-solid fa-basket-shopping"></i>
+									</span>
+									<p class="price">$4.60 <span>$5.30</span></p>
+								</div>
+							</div>
+							<!-- Producto  -->
+							<div class="card-product">
+								<div class="container-img">
+									<img src="https://www.libreriailusion.com/wp-content/uploads/2022/07/3358a1-616b4cf5122a2e757d15927765610293-640-0-600x600.png"
+										alt="LÁPICES PARA DIBUJAR GRAFITO" />
+									<span class="discount">-22%</span>
+									<div class="button-group">
+										<span>
+											<i class="fa-regular fa-eye"></i>
+										</span>
+										<span>
+											<i class="fa-regular fa-heart"></i>
+										</span>
+										<span>
+											<i class="fa-solid fa-code-compare"></i>
+										</span>
+									</div>
+								</div>
+								<div class="content-card-product">
+									<div class="stars">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-regular fa-star"></i>
+										<i class="fa-regular fa-star"></i>
+									</div>
+									<h3>LÁPICES PARA DIBUJAR GRAFITO</h3>
+									<span class="add-cart">
+										<i class="fa-solid fa-basket-shopping"></i>
+									</span>
+									<p class="price">$5.70 <span>$7.30</span></p>
+								</div>
+							</div>
+							<!-- producto -->
+							<div class="card-product">
+								<div class="container-img">
+									<img src="https://www.libreriailusion.com/wp-content/uploads/2022/02/014103c3fc3a3b48164e7589b4846588.jpg"
+										alt="Caja de Madera de Colores" />
+									<span class="discount">-30%</span>
+									<div class="button-group">
+										<span>
+											<i class="fa-regular fa-eye"></i>
+										</span>
+										<span>
+											<i class="fa-regular fa-heart"></i>
+										</span>
+										<span>
+											<i class="fa-solid fa-code-compare"></i>
+										</span>
+									</div>
+								</div>
+								<div class="content-card-product">
+									<div class="stars">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+									</div>
+									<h3>Caja de Madera de Colores</h3>
+									<span class="add-cart">
+										<i class="fa-solid fa-basket-shopping"></i>
+									</span>
+									<p class="price">$3.85 <span>$5.50</span></p>
+								</div>
+							</div>
+							<!-- producto -->
+							<div class="card-product">
+								<div class="container-img">
+									<img src="https://www.libreriailusion.com/wp-content/uploads/2021/08/carpeta_tapa_plastica_peque.jpeg"
+										alt="Folders de plastico" />
+									<div class="button-group">
+										<span>
+											<i class="fa-regular fa-eye"></i>
+										</span>
+										<span>
+											<i class="fa-regular fa-heart"></i>
+										</span>
+										<span>
+											<i class="fa-solid fa-code-compare"></i>
+										</span>
+									</div>
+								</div>
+								<div class="content-card-product">
+									<div class="stars">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-regular fa-star"></i>
+									</div>
+									<h3>Folders de plastico</h3>
+									<span class="add-cart">
+										<i class="fa-solid fa-basket-shopping"></i>
+									</span>
+									<p class="price">$5.60</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!--  categorias -->
+
+					<section class="container blogs">
+						<h1 class="heading-1">Lo Nuevo</h1>
+
+						<div class="container-blogs">
+							<div class="card-blog">
+								<div class="container-img">
+									<img src="https://http2.mlstatic.com/D_NQ_NP_743974-MLM75838125378_042024-O.webp"
+										alt="Imagen Blog 1" />
+									<div class="button-group-blog">
+										<span>
+											<i class="fa-solid fa-magnifying-glass"></i>
+										</span>
+										<span>
+											<i class="fa-solid fa-link"></i>
+										</span>
+									</div>
+								</div>
+								<div class="content-blog">
+									<h3>Colleccion Completa de Harry Potter</h3>
+									<span>15 Octubre 2024</span>
+									<p>
+										Disfruta de estas nuevas y magicas aventuras
+										junto a Harry y sus amigos descubre sus
+										inicios y crece junto a el, veras nacer al
+										mejor mago de los tiempos de HOWARS.
+									</p>
+									<div class="btn-read-more">Leer más</div>
+								</div>
+							</div>
+							<div class="card-blog">
+								<div class="container-img">
+									<img src="https://zachary-jones.com/zambombazo/wp-content/uploads/2016/08/07_reglas_y_calculadoras.jpg"
+										alt="Imagen Blog 2" />
+									<div class="button-group-blog">
+										<span>
+											<i class="fa-solid fa-magnifying-glass"></i>
+										</span>
+										<span>
+											<i class="fa-solid fa-link"></i>
+										</span>
+									</div>
+								</div>
+								<div class="content-blog">
+									<h3>Los Mejores Utiles de toda Categoria</h3>
+									<span>15 Octubre 2024</span>
+									<p>
+										Explora de la amplia gama de utiles
+										disponibles para todo publico, deja brillar
+										la imaginacion asi como el orden, para escuelas
+										y oficinas, para estudiantes y padres ven y explora
+										por ti mismo.
+									</p>
+									<div class="btn-read-more">Leer más</div>
+								</div>
+							</div>
+							<div class="card-blog">
+								<div class="container-img">
+									<img src="https://imgs.hipertextual.com/wp-content/uploads/2024/03/mangas-mas-vendidos-de-la-historia.jpg"
+										alt="Imagen Blog 3" />
+									<div class="button-group-blog">
+										<span>
+											<i class="fa-solid fa-magnifying-glass"></i>
+										</span>
+										<span>
+											<i class="fa-solid fa-link"></i>
+										</span>
+									</div>
+								</div>
+								<div class="content-blog">
+									<h3>Mangas actualizados</h3>
+									<span>15 Octubre 2024</span>
+									<p>
+										Iniciando el año con una nueva amplia
+										gama de mangas desde lo dramatico hasta lo mejor
+										se el heroe de tu propia historia sumerjiendote
+										junto a los protagonistas tu que esperas.
+									</p>
+									<div class="btn-read-more">Leer más</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+						aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<ul class="navbar-nav ml-auto">
+
+
+						</ul>
+					</div>
+			</div>
+			</nav>
+
+			</div>
+	</div>
+	
+
+
+
+
+	
+
+	<!-- Footer -->
+	<div th:fragment="footer">
+		<footer class="footer">
+			<div class="container container-footer">
+				<div class="menu-footer">
+					<div class="contact-info">
+						<p class="title-footer">Información de Contacto</p>
+						<ul>
+							<li>
+								Dirección: 71 Pennington Lane Vernon Rockville, CT
+								06066
+							</li>
+							<li>Teléfono: 123-456-7890</li>
+							<li>EmaiL: LibreriaPen@support.com</li>
+						</ul>
+						<div class="social-icons">
+							<span class="facebook">
+								<i class="fa-brands fa-facebook-f"></i>
+							</span>
+							<span class="twitter">
+								<i class="fa-brands fa-twitter"></i>
+							</span>
+							<span class="youtube">
+								<i class="fa-brands fa-youtube"></i>
+							</span>
+							<span class="pinterest">
+								<i class="fa-brands fa-pinterest-p"></i>
+							</span>
+							<span class="instagram">
+								<i class="fa-brands fa-instagram"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="information">
+						<p class="title-footer">Información</p>
+						<ul>
+							<li><a href="#">Acerca de Nosotros</a></li>
+							<li><a href="#">Información Delivery</a></li>
+							<li><a href="#">Politicas de Privacidad</a></li>
+							<li><a href="#">Términos y condiciones</a></li>
+							<li><a href="#">Contactános</a></li>
+						</ul>
+					</div>
+
+					<div class="my-account">
+						<p class="title-footer">Mi cuenta</p>
+
+						<ul>
+							<li><a href="#">Mi cuenta</a></li>
+							<li><a href="#">Historial de ordenes</a></li>
+							<li><a href="#">Lista de deseos</a></li>
+							<li><a href="#">Boletín</a></li>
+							<li><a href="#">Reembolsos</a></li>
+						</ul>
+					</div>
+
+					<div class="newsletter">
+						<p class="title-footer">Boletín informativo</p>
+
+						<div class="content">
+							<p>
+								Suscríbete a nuestros boletines ahora y mantente al
+								día con nuevas colecciones y ofertas exclusivas.
+							</p>
+							<input type="email" placeholder="Ingresa el correo aquí...">
+							<button>Suscríbete</button>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-md-12 text-center">
+						<p>&copy; LIBRERIAS PEN S.A.C. R.U.C. 3452353265465 | Todos los Derechos Reservados.</p>
+					</div>
+				</div>
+
+
+				<h5>Libro de Reclamaciones</h5>
+				<a href="#"><img
+						src="https://www.crisol.com.pe/media/tem-banners/Item_libro_de_reclamaciones_128x80.png"
+						alt="Libro de Reclamaciones" width="100"></a>
+			</div>
+	</div>
+
+	</div>
+	</div>
+	</footer>
+	</div>
+
+	<!-- Bootstrap core JavaScript -->
+	<script th:src="@{vendor/jquery/jquery.min.js}"></script>
+	<script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+
+
+</body>
+
+</html>

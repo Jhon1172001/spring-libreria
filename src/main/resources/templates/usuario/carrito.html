@@ -2,93 +2,204 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>Libreri PEN - Carrito</title>
+  <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-  <title>Libreri PEN</title>
-
-
-  <!-- Bootstrap core CSS -->
-    <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
   <link th:href="@{/css/heroic-features.css}" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+  
+  <style>
+    /* Eliminar márgenes del body y el contenedor principal */
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
+    .container-hero {
+      margin: 0;
+      padding: 0;
+    }
+	
+	/* Estilo para las imágenes del carrito */
+	   .product-image {
+	     width: 80px;
+	     height: auto;
+	   }
+   
+  </style>
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <div th:include="usuario/template_usuario.html::header" th:if="${sesion==null}"></div>
-  
-   <div th:include="usuario/template_usuario.html::header-user" th:unless="${sesion==null}"></div>
+  <!-- Barra de Navegación -->
+  <div class="container-hero">
+            <div class="container hero">
+                <div class="customer-support">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="content-customer-support">
+                        <span class="text">Soporte al cliente</span>
+                        <span class="number">123-456-7890</span>
+                    </div>
+                </div>
 
-    <!-- Page Content -->
-    <div class="container">
+                <div class="container-logo" style="text-align: center;">
+                    <img src="https://i.ibb.co/d6x52z5/Dise-o-sin-t-tulo.jpg" width="100" height="80"
+                        style="display: block; margin: 0 auto;">
+                    <h1 class="logo" style="margin-top: 10px;"><a href="/" style="text-decoration: none; color: black;">LIBRERIA PEN</a></h1>
+                </div>
 
-
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">
-        Libreria PEN <small>Carrito</small>
-      </h1>
-
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
-        <li class="breadcrumb-item active">Carrito</li>
-      </ol>
-
-      <!-- Blog Post -->
-      <div class="card mb-4">
-        <div class="card-body">
-          <div class="row">
-           <div class="col-lg-9">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Producto</th>
-                  <th scope="col">Precio</th>
-                  <th scope="col">Cantidad</th>
-                  <th scope="col">Total</th>
-                  <th scope="col">Acción</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr th:each="dorden:${cart}">
-                  <td th:text="${dorden.nombre}"></td>
-                  <td th:text="${dorden.precio}"></td>
-                  <td th:text="${dorden.cantidad}"></td>
-                  <td th:text="${dorden.total}"></td>
-                  <td><a th:href="@{/delete/cart/{id}  (id=${dorden.producto.id}) }" class="btn btn-danger">Quitar</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="col-lg-3">
-            <h2 class="card-title">SUBTOTAL</h2>
-
-            <ul class="list-group">
-              <li class="list-group-item"><h5 th:text="${orden.total}"></h5></li>
-              <a th:href="@{/order}" class="btn btn-dark">Ver Orden</a>
-            </ul>
-          </div>
+    			<div class="container-user">
+    			        <a href="#" class="nav-item" style="margin-right: 10px; text-decoration: none; color: var(--dark-color);"></a>
+    			        <a href="#" class="nav-item" style="text-decoration: none; color: var(--dark-color);"></a>
+    			      </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    </div>
-    <!-- /.container -->
 
-    <!-- Footer -->
-    <div th:include="usuario/template_usuario.html::footer">
-    </div>
+  <!-- Barra de Menú -->
+  <div class="container-navbar">
+    <nav class="navbar container">
+      <ul class="menu">
+        <li><a href="#">Categorías</a></li>
+        <li><a href="#">Top 10</a></li>
+        <li><a href="#">Útiles</a></li>
+      </ul>
+      <form class="search-form">
+        <input type="search" placeholder="Buscar...">
+        <button class="btn-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </nav>
+  </div>
 
-     <!-- Bootstrap core JavaScript -->
-    <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
-    <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <!-- Contenido de la Página -->
+  <div class="container">
 
-  </body>
+    <table class="table">
+      <thead>
+        <tr>
+			<th scope="col">Imagen</th>
+          <th scope="col">Producto</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Total</th>
+          <th scope="col">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="dorden:${cart}">
+			<td><img class="img-fluid rounded product-image" th:src="@{/images/{img} (img=${dorden.producto.imagen})}" alt="Imagen del producto"></td>
 
-  </html>
+		  <td th:text="${dorden.nombre}"></td>
+          <td th:text="${dorden.nombre}"></td>
+          <td th:text="${dorden.precio}"></td>
+          <td th:text="${dorden.cantidad}"></td>
+          <td th:text="${dorden.total}"></td>
+          <td><a th:href="@{/delete/cart/{id} (id=${dorden.producto.id})}" class="btn btn-danger">Quitar</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+	<div class="col-lg-3" style="margin-bottom: 40px;"> <!-- Añadido margen inferior -->
+	  <h2 class="card-title">SUBTOTAL</h2>
+	  <ul class="list-group">
+	    <li class="list-group-item"><h5 th:text="${orden.total}"></h5></li>
+	    <a th:href="@{/order}" class="btn btn-dark">Ver Orden</a>
+	  </ul>
+	</div>
+
+  </div>
+  <!-- Footer -->
+  	<div th:fragment="footer">
+  		<footer class="footer">
+  			<div class="container container-footer">
+  				<div class="menu-footer">
+  					<div class="contact-info">
+  						<p class="title-footer">Información de Contacto</p>
+  						<ul>
+  							<li>
+  								Dirección: 71 Pennington Lane Vernon Rockville, CT
+  								06066
+  							</li>
+  							<li>Teléfono: 123-456-7890</li>
+  							<li>EmaiL: LibreriaPen@support.com</li>
+  						</ul>
+  						<div class="social-icons">
+  							<span class="facebook">
+  								<i class="fa-brands fa-facebook-f"></i>
+  							</span>
+  							<span class="twitter">
+  								<i class="fa-brands fa-twitter"></i>
+  							</span>
+  							<span class="youtube">
+  								<i class="fa-brands fa-youtube"></i>
+  							</span>
+  							<span class="pinterest">
+  								<i class="fa-brands fa-pinterest-p"></i>
+  							</span>
+  							<span class="instagram">
+  								<i class="fa-brands fa-instagram"></i>
+  							</span>
+  						</div>
+  					</div>
+
+  					<div class="information">
+  						<p class="title-footer">Información</p>
+  						<ul>
+  							<li><a href="#">Acerca de Nosotros</a></li>
+  							<li><a href="#">Información Delivery</a></li>
+  							<li><a href="#">Politicas de Privacidad</a></li>
+  							<li><a href="#">Términos y condiciones</a></li>
+  							<li><a href="#">Contactános</a></li>
+  						</ul>
+  					</div>
+
+  					<div class="my-account">
+  						<p class="title-footer">Mi cuenta</p>
+
+  						<ul>
+  							<li><a href="#">Mi cuenta</a></li>
+  							<li><a href="#">Historial de ordenes</a></li>
+  							<li><a href="#">Lista de deseos</a></li>
+  							<li><a href="#">Boletín</a></li>
+  							<li><a href="#">Reembolsos</a></li>
+  						</ul>
+  					</div>
+
+  					<div class="newsletter">
+  						<p class="title-footer">Boletín informativo</p>
+
+  						<div class="content">
+  							<p>
+  								Suscríbete a nuestros boletines ahora y mantente al
+  								día con nuevas colecciones y ofertas exclusivas.
+  							</p>
+  							<input type="email" placeholder="Ingresa el correo aquí...">
+  							<button>Suscríbete</button>
+  						</div>
+  					</div>
+  				</div>
+  				<div class="row mt-3">
+  					<div class="col-md-12 text-center">
+  						<p>&copy; LIBRERIAS PEN S.A.C. R.U.C. 3452353265465 | Todos los Derechos Reservados.</p>
+  					</div>
+  				</div>
+
+
+  				<h5>Libro de Reclamaciones</h5>
+  				<a href="#"><img
+  						src="https://www.crisol.com.pe/media/tem-banners/Item_libro_de_reclamaciones_128x80.png"
+  						alt="Libro de Reclamaciones" width="100"></a>
+  			</div>
+  	
+  	</div>
+  	</footer>
+  	</div>
+  <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
+  <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
