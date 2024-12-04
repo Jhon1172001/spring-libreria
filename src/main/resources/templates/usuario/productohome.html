@@ -2,7 +2,6 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -10,79 +9,118 @@
 
   <title>Libreria PEN</title>
 
-
   <!-- Bootstrap core CSS -->
-     <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
+  <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
   <link th:href="@{/css/heroic-features.css}" rel="stylesheet">
 
+  <style>
+    /* Eliminar el padding superior solo en esta página */
+    body {
+      padding-top: 0 !important;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <div th:include="usuario/template_usuario.html::header"></div>
-    <!-- Page Content -->
-    <div class="container">
-
-
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">
-        Libreria PEN <small>Producto</small>
-      </h1>
-
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
-        <li class="breadcrumb-item active">Producto</li>
-      </ol>
-
-      <!-- Blog Post -->
-      <div class="card mb-4">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-lg-6">
-              <a href="#"> <img class="img-fluid rounded"
-                th:src="@{/images/{img} (img=${producto.imagen}) }"  alt="">
-              </a>
-            </div>
-            <div class="col-lg-6">
-              <form th:action="@{/cart}" method="POST">
-              <input type="hidden" th:value="${producto.id}" name="id" >
-                <h2 class="card-title" th:text="${producto.nombre}"></h2>
-
-                <ul class="list-group">
-                  <li class="list-group-item"><h5 th:text=" 'precio: '+ ${producto.precio}"></h5></li>
-                  <li class="list-group-item">
-                    <p th:text=" 'Descripcion:'+ ${producto.descripcion} "></p>
-                  </li>
-                  <li class="list-group-item"><h6>
-                    Cantidad: <input type="number" id="cantidad" name="cantidad" autocomplete="off"
-                    min="1" max="5" value="1">
-                  </h6></li>
-                </ul>
-
-
-                <button type="submit"  class="btn btn-dark">Añadir al carrito </button>
-
-              </form>
-            </div>
-          </div>
+  <!-- Barra de Navegación -->
+  <div class="container-hero">
+    <div class="container hero">
+      <div class="customer-support">
+        <i class="fa-solid fa-headset" style="color: var(--primary-color);"></i>
+        <div class="content-customer-support">
+          <span class="text" style="font-size: 1.2rem;">Soporte al cliente</span>
+          <span class="number" style="font-size: 1.2rem;">123-456-7890</span>
         </div>
       </div>
 
+      <div class="container-logo">
+        <img src="https://i.ibb.co/d6x52z5/Dise-o-sin-t-tulo.jpg" width="80" height="60" alt="Logo Libreria PEN">
+        <h1 class="logo"><a href="#" onclick="window.location.href='/'" style="font-size: 2rem; color: var(--dark-color);">LIBRERIA PEN</a></h1>
+      </div>
 
+      <div class="container-user">
+        <i class="fa-solid fa-user" style="color: var(--primary-color);"></i>
+        <a href="#" class="nav-item" style="margin-right: 10px; text-decoration: none; color: var(--dark-color);">Login</a>
+        <i class="fa-solid fa-basket-shopping" style="color: var(--primary-color);"></i>
+        <a href="#" class="nav-item" style="text-decoration: none; color: var(--dark-color);">Carrito</a>
+      </div>
     </div>
-    <!-- /.container -->
+  </div>
 
-    <!-- Footer -->
-     <div th:include="usuario/template_usuario.html::footer">
+  <!-- Barra de Menú -->
+  <div class="container-navbar">
+    <nav class="navbar container">
+      <ul class="menu">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="#">Categorías</a></li>
+        <li><a href="#">Top 10</a></li>
+        <li><a href="#">Útiles</a></li>
+        <li><a href="#">Reseñas</a></li>
+        <li><a href="#">Más</a></li>
+      </ul>
+      <form class="search-form">
+        <input type="search" placeholder="Buscar...">
+        <button class="btn-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </nav>
+  </div>
+
+  <!-- Contenido de la Página -->
+  <div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    
+
+    
+
+    <!-- Blog Post -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <a href="#">
+              <img class="img-fluid rounded" th:src="@{/images/{img} (img=${producto.imagen})}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <form th:action="@{/cart}" method="POST">
+              <input type="hidden" th:value="${producto.id}" name="id">
+              <h2 class="card-title" th:text="${producto.nombre}"></h2>
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h5 th:text="'precio: ' + ${producto.precio}"></h5>
+                </li>
+                <li class="list-group-item">
+                  <p th:text="'Descripcion: ' + ${producto.descripcion}"></p>
+                </li>
+                <li class="list-group-item">
+                  <h6>
+                    Cantidad: <input type="number" id="cantidad" name="cantidad" autocomplete="off" min="1" max="5" value="1">
+                  </h6>
+                </li>
+              </ul>
+
+              <button type="submit" class="btn btn-dark">Añadir al carrito</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 
-     <!-- Bootstrap core JavaScript -->
-    <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
-    <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  </div>
+  <!-- /.container -->
 
-  </body>
+  <!-- Footer -->
+  <div th:include="usuario/template_usuario.html::footer"></div>
 
-  </html>
+  <!-- Bootstrap core JavaScript -->
+  <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
+  <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -2,93 +2,109 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Libreri PEN</title>
-
-
-  <!-- Bootstrap core CSS -->
-    <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
+  <title>Libreri PEN - Carrito</title>
+  <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
   <link th:href="@{/css/heroic-features.css}" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+  
+  <style>
+    /* Eliminar márgenes del body y el contenedor principal */
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
+    .container-hero {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <div th:include="usuario/template_usuario.html::header" th:if="${sesion==null}"></div>
-  
-   <div th:include="usuario/template_usuario.html::header-user" th:unless="${sesion==null}"></div>
-
-    <!-- Page Content -->
-    <div class="container">
-
-
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">
-        Libreria PEN <small>Carrito</small>
-      </h1>
-
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
-        <li class="breadcrumb-item active">Carrito</li>
-      </ol>
-
-      <!-- Blog Post -->
-      <div class="card mb-4">
-        <div class="card-body">
-          <div class="row">
-           <div class="col-lg-9">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Producto</th>
-                  <th scope="col">Precio</th>
-                  <th scope="col">Cantidad</th>
-                  <th scope="col">Total</th>
-                  <th scope="col">Acción</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr th:each="dorden:${cart}">
-                  <td th:text="${dorden.nombre}"></td>
-                  <td th:text="${dorden.precio}"></td>
-                  <td th:text="${dorden.cantidad}"></td>
-                  <td th:text="${dorden.total}"></td>
-                  <td><a th:href="@{/delete/cart/{id}  (id=${dorden.producto.id}) }" class="btn btn-danger">Quitar</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="col-lg-3">
-            <h2 class="card-title">SUBTOTAL</h2>
-
-            <ul class="list-group">
-              <li class="list-group-item"><h5 th:text="${orden.total}"></h5></li>
-              <a th:href="@{/order}" class="btn btn-dark">Ver Orden</a>
-            </ul>
-          </div>
+  <!-- Barra de Navegación -->
+  <div class="container-hero">
+    <div class="container hero">
+      <div class="customer-support">
+        <i class="fa-solid fa-headset" style="color: var(--primary-color);"></i>
+        <div class="content-customer-support">
+          <span class="text" style="font-size: 1.2rem;">Soporte al cliente</span>
+          <span class="number" style="font-size: 1.2rem;">123-456-7890</span>
         </div>
       </div>
+
+      <div class="container-logo">
+        <img src="https://i.ibb.co/d6x52z5/Dise-o-sin-t-tulo.jpg" width="80" height="60" alt="Logo Libreria PEN">
+        <h1 class="logo"><a href="#" onclick="window.location.href='/'" style="font-size: 2rem; color: var(--dark-color);">LIBRERIA PEN</a></h1>
+      </div>
+
+      <div class="container-user">
+        <i class="fa-solid fa-user" style="color: var(--primary-color);"></i>
+        <a href="#" class="nav-item" style="margin-right: 10px; text-decoration: none; color: var(--dark-color);">Login</a>
+        <i class="fa-solid fa-basket-shopping" style="color: var(--primary-color);"></i>
+        <a href="#" class="nav-item" style="text-decoration: none; color: var(--dark-color);">Carrito</a>
+      </div>
     </div>
+  </div>
+
+  <!-- Barra de Menú -->
+  <div class="container-navbar">
+    <nav class="navbar container">
+      <ul class="menu">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="#">Categorías</a></li>
+        <li><a href="#">Top 10</a></li>
+        <li><a href="#">Útiles</a></li>
+        <li><a href="#">Reseñas</a></li>
+        <li><a href="#">Más</a></li>
+      </ul>
+      <form class="search-form">
+        <input type="search" placeholder="Buscar...">
+        <button class="btn-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </nav>
+  </div>
+
+  <!-- Contenido de la Página -->
+  <div class="container">
+    <h1 class="mt-4 mb-3">Libreria PEN <small>Carrito</small></h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Producto</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Total</th>
+          <th scope="col">Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="dorden:${cart}">
+          <td th:text="${dorden.nombre}"></td>
+          <td th:text="${dorden.precio}"></td>
+          <td th:text="${dorden.cantidad}"></td>
+          <td th:text="${dorden.total}"></td>
+          <td><a th:href="@{/delete/cart/{id} (id=${dorden.producto.id})}" class="btn btn-danger">Quitar</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="col-lg-3">
+      <h2 class="card-title">SUBTOTAL</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><h5 th:text="${orden.total}"></h5></li>
+        <a th:href="@{/order}" class="btn btn-dark">Ver Orden</a>
+      </ul>
     </div>
-    <!-- /.container -->
+  </div>
 
-    <!-- Footer -->
-    <div th:include="usuario/template_usuario.html::footer">
-    </div>
-
-     <!-- Bootstrap core JavaScript -->
-    <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
-    <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
-
-  </body>
-
-  </html>
+  <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
+  <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
