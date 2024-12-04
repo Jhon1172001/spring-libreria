@@ -61,6 +61,8 @@
 		</dependency>
 		
 
+<<<<<<< Updated upstream
+=======
 
 
 <dependency>
@@ -76,6 +78,7 @@
 </dependency>
 		
 
+>>>>>>> Stashed changes
 	</dependencies>
 
 	<build>
