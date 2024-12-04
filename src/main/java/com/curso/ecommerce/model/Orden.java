@@ -107,7 +107,62 @@ public class Orden {
 				+ fechaRecibida + ", total=" + total + "]";
 	}
 	
+	public void getleo(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
 	
+	public void setleo(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	public void getlee(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	
+	public void setlee(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	public void getlei(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	
+	public void setlei(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	public void getlea(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	
+	public void setlea(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	public void getle6(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	
+	public void setle6(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	public void getle3(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	
+	public void setle3(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	public void getleod(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	
+	public void setleod(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	public void getleoa(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
+	
+	public void setleoa(List<DetalleOrden> detalle) {
+		this.detalle = detalle;
+		}
 
 }
 
